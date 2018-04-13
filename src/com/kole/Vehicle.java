@@ -24,4 +24,5 @@ public class Vehicle {
     public void setPassangerType(boolean passangerType) {
         isPassangerType = passangerType;
     }
+
 }

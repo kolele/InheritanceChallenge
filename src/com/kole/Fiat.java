@@ -4,8 +4,8 @@ public class Fiat extends Car {
     private int numberOfGears;
     private String colour;
 
-    public Fiat(boolean isMoveable, boolean isPassangerType, int numberOfWheels, boolean hasRoof, int numberOfGears, String colour) {
-        super(isMoveable, isPassangerType, numberOfWheels, hasRoof);
+    public Fiat(int numberOfGears, String colour) {
+        super(true, true, 4, true);
         this.numberOfGears = numberOfGears;
         this.colour = colour;
     }
