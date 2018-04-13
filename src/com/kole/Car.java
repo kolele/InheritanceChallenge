@@ -1,50 +1,44 @@
 package com.kole;
 
 public class Car extends Vehicle {
+    private int numberOfWheels;
+    private boolean hasRoof;
 
-    private int wheels;
-    private String type;
-
-    public Car(int engine, int roof, int wheels, String type) {
-        super(engine, roof);
-        this.wheels = wheels;
-        this.type = type;
+    public Car(boolean isMoveable, boolean isPassangerType, int numberOfWheels, boolean hasRoof) {
+        super(isMoveable, isPassangerType);
+        this.numberOfWheels = numberOfWheels;
+        this.hasRoof = hasRoof;
     }
 
-    public int getWheels() {
-        return wheels;
+    public int getNumberOfWheels() {
+        return numberOfWheels;
     }
 
-    public void setWheels(int wheels) {
-        this.wheels = wheels;
+    public void setNumberOfWheels(int numberOfWheels) {
+        this.numberOfWheels = numberOfWheels;
     }
 
-    public String getType() {
-        return type;
+    public boolean isHasRoof() {
+        return hasRoof;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setHasRoof(boolean hasRoof) {
+        this.hasRoof = hasRoof;
     }
 
-    int gear;
-    public void changeGearUp(int gear){
-        if (gear > 5){
-            System.out.println("We are in fifth gear you can only lower down");
-        } else {
-            gear++;
-            System.out.println("Gear changed to " + gear);
-        }
-    }
-
-    public void changeGearDown (int gear){
+    public void steerLeft(){
 
     }
 
-    int speed = 0;
+    public void steerRight(){
+
+    }
 
     public void increaseSpeed(){
-        speed++;
-        System.out.println("Car is moving ");
+
+    }
+
+    public void decreaseSpeed(){
+
     }
 }

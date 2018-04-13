@@ -1,24 +1,13 @@
 package com.kole;
 
 public class Fiat extends Car {
-
-    private String model;
     private int numberOfGears;
-    private String color;
+    private String colour;
 
-    public Fiat(int engine, int roof, int wheels, String type, String model, int numberOfGears, String color) {
-        super(engine, roof, wheels, type);
-        this.model = model;
+    public Fiat(boolean isMoveable, boolean isPassangerType, int numberOfWheels, boolean hasRoof, int numberOfGears, String colour) {
+        super(isMoveable, isPassangerType, numberOfWheels, hasRoof);
         this.numberOfGears = numberOfGears;
-        this.color = color;
-    }
-
-    public String getModel() {
-        return model;
-    }
-
-    public void setModel(String model) {
-        this.model = model;
+        this.colour = colour;
     }
 
     public int getNumberOfGears() {
@@ -29,11 +18,43 @@ public class Fiat extends Car {
         this.numberOfGears = numberOfGears;
     }
 
-    public String getColor() {
-        return color;
+    public String getColour() {
+        return colour;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColour(String colour) {
+        this.colour = colour;
+    }
+
+    @Override
+    public void steerLeft() {
+        super.steerLeft();
+        System.out.println("Stilo is steering left ma dawg");
+    }
+
+    @Override
+    public void steerRight() {
+        super.steerRight();
+        System.out.println("Stilo is steering right ma dawg");
+    }
+
+    @Override
+    public void increaseSpeed() {
+        super.increaseSpeed();
+        System.out.println("Increasing speed");
+    }
+
+    @Override
+    public void decreaseSpeed() {
+        super.decreaseSpeed();
+        System.out.println("Decreasing speed");
+    }
+
+    public void changeGearUp(){
+        System.out.println("Gear up!");
+    }
+
+    public void changeGearDown(){
+        System.out.println("Gear down");
     }
 }

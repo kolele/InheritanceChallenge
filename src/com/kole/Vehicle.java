@@ -1,27 +1,27 @@
 package com.kole;
 
 public class Vehicle {
-    private int engine;
-    private int roof;
+    private boolean isMoveable;
+    private boolean isPassangerType;
 
-    public Vehicle(int engine, int roof) {
-        this.engine = engine;
-        this.roof = roof;
+    public Vehicle(boolean isMoveable, boolean isPassangerType) {
+        this.isMoveable = isMoveable;
+        this.isPassangerType = isPassangerType;
     }
 
-    public int getEngine() {
-        return engine;
+    public boolean isMoveable() {
+        return isMoveable;
     }
 
-    public void setEngine(int engine) {
-        this.engine = engine;
+    public void setMoveable(boolean moveable) {
+        isMoveable = moveable;
     }
 
-    public int getRoof() {
-        return roof;
+    public boolean isPassangerType() {
+        return isPassangerType;
     }
 
-    public void setRoof(int roof) {
-        this.roof = roof;
+    public void setPassangerType(boolean passangerType) {
+        isPassangerType = passangerType;
     }
 }
